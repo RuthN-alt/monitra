@@ -11,10 +11,10 @@ Tracks uptime, response time, SSL expiration, and status codes with persistent s
 
 * ⚡ Concurrent URL monitoring (goroutines)
 * 📊 Real-time terminal dashboard (live refresh)
-* 💾 SQLite persistence (historical tracking)
+* 💾 SQLite persistence ( tracking)
 * 🔐 SSL certificate expiry monitoring
 * 📈 Uptime statistics per target
-* 📡 Prometheus metrics endpoint (optional)
+* 📡 Prometheus metrics endpoint 
 * 🔔 Webhook + email notification support
 * ⚙️ YAML-based configuration
 
@@ -51,8 +51,8 @@ Tracks uptime, response time, SSL expiration, and status codes with persistent s
 
 ```bash
 git clone <repo-url>
-cd Monitra
-go build -o Monitra ./cmd/sentinel
+cd monitra
+go build -o monitra ./cmd/sentinel
 ```
 
 ---
@@ -99,7 +99,7 @@ metrics:
 * Runs concurrent health checks
 * Stores results in SQLite
 * Displays live terminal dashboard
-* Sends notifications (if enabled)
+* Sends notifications 
 * Updates Prometheus metrics
 
 ---
@@ -113,7 +113,7 @@ metrics:
 ### Shows:
 
 * Latest stored results
-* No active monitoring
+* Active monitoring
 * Clean table view
 
 ---
@@ -128,7 +128,7 @@ metrics:
 
 * Uptime %
 * Total checks
-* Average response time
+* Response time
 * Last check time
 
 ---
