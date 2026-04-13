@@ -1,0 +1,55 @@
+# Site Sentinel Configuration
+
+# Check interval in seconds
+check_interval: 60
+
+# Database configuration
+database:
+  path: sentinel.db
+
+# Targets to monitor
+targets:
+  - name: Google
+    url: https://www.google.com
+    check_ssl: true
+  
+  - name: GitHub
+    url: https://github.com
+    check_ssl: true
+  
+  - name: Example
+    url: https://example.com
+    check_ssl: true
+
+# Notification configuration
+notifications:
+  # Webhook notifications
+  webhooks:
+    - url: https://hooks.example.com/webhook
+      enabled: false
+      events:
+        - down
+        - up
+        - ssl_expiring
+  
+  # Email notifications
+  email:
+    enabled: false
+    from: sentinel@example.com
+    to:
+      - admin@example.com
+    events:
+      - down
+      - ssl_expiring
+    smtp:
+      host: smtp.example.com
+      port: 587
+      username: user@example.com
+      password: your-password
+      use_tls: true
+
+# Prometheus metrics endpoint
+metrics:
+  enabled: true
+  port: 9090
+  path: /metrics
